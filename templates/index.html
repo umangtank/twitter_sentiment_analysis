@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Twitter Sentiments Analysis</title>
+</head>
+<style>
+    form{
+        padding-top: 198px;
+    }
+    h3{
+        font-family: monospace;
+        font-size: x-large;
+    }
+    body{
+        margin: 20px;
+        padding: 20px;
+        background-color:whitesmoke;
+        background-repeat: no-repeat;
+        background-size: 500px;
+        background-attachment: fixed;
+        background-clip: inherit;
+        background-position: center;
+        background-image: url({{ url_for ('static',filename = 'images.jfif') }})
+    }
+    .submit{
+        background-color:dodgerblue;
+        color: white;
+        width: 125px;
+        height: 45px;
+        font-size: 20px;
+        margin-left: 300px;
+        border-radius: 10px;
+    }
+    .submit:hover{
+        background-color:white;
+        color: dodgerblue;
+        width: 125px;
+        border-radius: 10px;
+        height: 45px;
+    }
+    textarea:focus, input:focus {
+    color:dodgerblue;
+}
+</style>
+
+<body align="center">
+
+    <form action="/submit" method="POST">
+        <h3></h3>
+        <textarea name="tweet" cols="53" rows="13" placeholder="Write your tweet here.." required></textarea><br><br><br><br>
+        <input type="submit" class = "submit" value = "Get Analysis">
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Twitter
+        </title>
+    </head>
+    <style>
+        body{
+            margin: 200px;
+            background-color: whitesmoke;
+        }
+        table{
+            align-self: center;
+            width: 300px;
+            height: 200px;
+            border-color: dodgerblue;
+        }
+        .color{
+            color: blue;
+            font-family: cursive;
+            font-size: medium;
+        }
+        .hated{
+            color: red;
+        }
+        .not_hated{
+            color: green;
+        }
+        img{
+            width: 60px;
+            height: 60px;
+        }
+        .submit{
+        background-color:dodgerblue;
+        color: white;
+        width: 150px;
+        height: 35px;
+        font-size: 20px;
+        border-radius: 10px;
+    }
+    .submit:hover{
+        background-color:white;
+        color: dodgerblue;
+        width: 150px;
+        border-radius: 10px;
+        height: 35px;
+    }
+    </style>
+    <body align = "center">
+    
+        <table align="center" border="20px">
+            <tr>
+                <a href="/"><img src="{{ url_for('static', filename='logo.png') }}" class="avatar"></a>
+            </tr>
+            <tr>
+            <td>
+                <h2 class = "color">Sentiment analysis</h2>
+            </td>
+            </tr>
+            <tr>
+                {% if score == 1 %}
+                <td>
+                    <h1 class="hated">Nagative</h1>
+                </td>
+                {% else %}
+                <td>
+                    <h1 class= "not_hated">Positive</h1>
+                </td>
+                {% endif %}
+            </tr>
+        </table>
+    </body>
+</html>
