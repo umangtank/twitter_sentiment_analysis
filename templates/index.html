@@ -6,11 +6,11 @@
 </head>
 <style>
     form{
-        padding-top: 198px;
+        padding-top: 90px;
     }
     h3{
         font-family: monospace;
-        font-size: x-large;
+        font-size: xx-large;
     }
     body{
         margin: 20px;
@@ -39,18 +39,26 @@
         border-radius: 10px;
         height: 45px;
     }
+
     textarea:focus, input:focus {
     color:dodgerblue;
-}
+    font-size: 13px;
+    }
+
+    .text{
+        color: teal;
+        font-weight: bold;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        
+    }
 </style>
 
 <body align="center">
-
+    <h3 class = "text">Twitter Sentiments Analysis</h3>
     <form action="/submit" method="POST">
         <h3></h3>
         <textarea name="tweet" cols="53" rows="13" placeholder="Write your tweet here.." required></textarea><br><br><br><br>
         <input type="submit" class = "submit" value = "Get Analysis">
     </form>
 </body>
-
 </html>
