@@ -14,7 +14,7 @@ def home():
     return render_template("index.html")
 
 
-@app.route('/submit',methods=['POST'])
+@app.route('/submit',methods=['POST','GET'])
 def submit():
     if request.method == "POST":
         tweet = request.form['tweet']
